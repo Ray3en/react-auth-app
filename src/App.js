@@ -1,13 +1,19 @@
-import { Link } from "react-router-dom";
+import { Link, createBrowserRouter, useLocation, useNavigate } from "react-router-dom";
 import Button from "./components/UI/Button/Button";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Modal from "./components/Modal/Modal";
 
 function App() {
 
   const [active, setActive] = useState(false)
+  let navigate = useNavigate()
 
-  // Реализовать в компоненте Modal кнопку 'X', который закроет моадльное окно
+
+
+
+  useEffect(() => {
+    window.addEventListener("popstate", () => setActive(false))
+  })
 
   return (
     <div>

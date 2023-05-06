@@ -7,7 +7,6 @@ import {faXmark} from '@fortawesome/free-solid-svg-icons'
 
 
 function Modal(props){
-
     const {active, setActive} = props
 
     return(
